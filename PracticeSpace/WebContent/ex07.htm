@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link rel="stylesheet" href="basic.css">
+<style>
+	
+	img { border: 10px solid #A9A9A9; margin: 15px; }
+	input { padding: 10px; font-size: 1.7em;  margin: 20px 5px; }
+
+</style>
+<script>
+
+	
+	var list;
+	var pw = "";
+
+	window.onload = function() {
+		
+		list = document.images;
+
+		for (var i=0; i<list.length; i++) {
+			list[i].onmouseover = function() {
+				pw += getNum(event.srcElement.src);
+				event.srcElement.src = "images/rect_icon10.png";
+			};
+		}
+
+	};
+	
+	function reset() {
+		for (var i=0; i<list.length; i++) {
+			list[i].src = "images/rect_icon0" + (i+1) + ".png";
+		}
+		pw = "";
+	}
+
+	function input() {
+		if (pw == "14789") {
+			location.href = "http://naver.com";
+		} else {
+			alert("Error!!");
+			reset();
+		}
+	}
+
+	function getNum(url) {
+		var index = url.lastIndexOf(".");
+		return url.substr(index-1, 1);
+	}
+	
+</script>
+</head>
+<body onselectstart="return false;">
+	<!--  -->
+	<div class="main m600">
+	<h1>Lock</h1>
+	<ul>
+		<li>password : 'L'</li>
+	</ul>
+	<div style="text-align: center;">
+		<img src="images/rect_icon01.png">
+		<img src="images/rect_icon02.png">
+		<img src="images/rect_icon03.png"><br>
+		<img src="images/rect_icon04.png">
+		<img src="images/rect_icon05.png">		
+		<img src="images/rect_icon06.png"><br>
+		<img src="images/rect_icon07.png">
+		<img src="images/rect_icon08.png">
+		<img src="images/rect_icon09.png">
+	</div>
+	<div style="text-align: center;">
+		<input type="button" value="RESET" onclick="reset();">
+		<input type="button" value="INPUT" onclick="input();">
+	</div>
+	</div>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

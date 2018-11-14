@@ -1,0 +1,95 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="basic.css">
+<style type="text/css">
+	#tbl1 {
+		border: 1px solid gray;
+		border-collapse: collapse;
+		width: 600px;
+	}
+	
+	#tbl1 td {
+		border: 1px solid gray;
+		padding: 10px;
+	}
+	
+	#tbl1 td:first-child {
+		background-color: #DEDEDE;
+		width: 100px;
+		text-align: center;
+	}
+	
+	input {
+		border: 1px solid gray;
+		padding-left: 3px;
+	}
+	
+	#zip1, #zip2 {
+		width: 50px;
+	}
+	
+	#address1, #address2 {
+		width: 98%;
+	}
+</style>
+<script type="text/javascript">
+	function search() {
+		window.open("Search.htm", "search", "width=300, height=200");		
+		
+		
+		
+		
+		
+		
+		
+		//name
+		//<input type="text" name="txt1" />
+		
+		//HTML
+		//element, 요소
+		//tag, 태그
+		//태그 == 요소
+		
+		//XML
+		//요소
+		
+		
+		
+		//var name = "txt1";
+		
+		//폼의 하위 태그..
+		//alert(document.form1.elements["txt1"]);
+		//System.out.println();//화면
+		
+		
+		
+	}
+</script>
+</head>
+<body>
+	<form name="form1" class="main m600">
+		<h1>우편 번호 검색</h1>
+		<table id="tbl1">
+			<tr>
+				<td>우편번호</td>
+				<td>
+					<input type="text" id="zip1" name="zip1" /> - <input type="text" id="zip2" name="zip2" />
+					<input type="button" value=" 우편번호검사하기" onclick="search();" />
+				</td>
+			</tr>
+			<tr>
+				<td>주소</td>
+				<td><input type="text" id="address1" name="address1" /></td>
+			</tr>
+			<tr>
+				<td>상세주소</td>
+				<td><input type="text" id="address2" name="address2" /></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

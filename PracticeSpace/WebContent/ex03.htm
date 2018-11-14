@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link rel="stylesheet" href="basic.css">
+<style>
+	table tr td a {
+		display: block;
+		margin: 10px;
+		text-decoration: none;
+		color: #444;
+		border: 1px solid #A9A9A9;
+		border-radius: 5px;
+		background-color: #eee;
+		padding: 5px 10px;
+	}
+</style>
+<script>
+
+	
+	window.onload = function() {
+
+		var list = document.links;
+
+		for (var i=0; i<list.length; i++) {
+			
+			list[i].onmouseover = function() {
+				
+				document.images["img"].src = "images/dog0" + event.srcElement.dataset["no"] + ".jpg";
+
+			};
+
+			list[i].onclick = function() {
+				window.open("images/dog0" + event.srcElement.dataset["no"] + "_big.jpg", "big", "width=1400, height=1050");
+			};
+
+		}
+
+	};
+	
+</script>
+</head>
+<body onselectstart="return false;">
+	<!--  -->
+	<div class="main m800">
+	<h1>롤오버 이미지</h1>
+	<ul>
+		<li>강아지</li>
+		<li>ex23_event.htm 방식 사용(일괄 처리)</li>
+		<li>dog01.jpg(중간 크기)</li>
+		<li>dog01_big.jpg(큰 크기)</li>
+	</ul>
+	<table border="1" width="600">
+		<tr>
+			<td>
+				<a href="#" data-no="1">강아지1</a>
+				<a href="#" data-no="2">강아지2</a>
+				<a href="#" data-no="3">강아지3</a>
+				<a href="#" data-no="4">강아지4</a>
+				<a href="#" data-no="5">강아지5</a>
+			</td>
+			<td><img src="images/dog01.jpg" name="img"></td>
+		</tr>
+	</table>
+	</div>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
