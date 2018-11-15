@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+	#box{
+		width:1300px;
+		padding:100px;
+		margin:0 auto;
+	}
+</style>
+<script src="/PracticeSpace/jquery/js/jquery-1.12.4.js"></script>
+<script src="/PracticeSpace/bootstrap/js/bootstrap.js"></script>
+<script>
+
+var img = document.images;
+	window.onload=function(){
+		for(var i =0; i<img.length; i++){
+			img[i].addEventListener("mouseover",function(){
+				event.srcElement.src="images/dog0"+event.srcElement.src.substring(event.srcElement.src.indexOf("cat")+4,event.srcElement.src.indexOf("cat")+5)+".jpg";
+				
+			});
+			
+			img[i].addEventListener("mouseout",function(){
+				event.srcElement.src="images/cat0"+event.srcElement.src.substring(event.srcElement.src.indexOf("dog")+4,event.srcElement.src.indexOf("dog")+5)+".jpg";
+				
+			});
+			
+		}
+		
+		
+		
+	};
+	
+
+
+
+
+</script>
+<title></title>
+<link rel="stylesheet" href="/WebClientTest/jquery/css/jquery-ui.css">
+</head>
+<body>
+	<div class="container">
+		<h1 class="page-header">롤 오버 이미지</h1>
+		<ul>
+			<li>고양이 - 강아지</li>
+			<li>ex23_event.htm 방식 사용(일괄 처리)</li>
+		</ul>
+		<div id="box">
+			<img src="images/cat01.jpg" id="img01"/>
+			<img src="images/cat02.jpg" id="img02"/>
+			<img src="images/cat03.jpg" id="img03"/>
+			<img src="images/cat04.jpg" id="img04"/>
+			<img src="images/cat05.jpg" id="img05"/>
+		</div>
+		
+	</div>
+	
+</body>
+</html>

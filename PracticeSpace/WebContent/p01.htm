@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+	div{
+		width:300px;
+		margin:0 auto;
+	}
+</style>
+
+<script>
+var ten;
+var one;
+var count=0;
+	window.onload = function(){
+		
+		ten = document.getElementById("ten");
+		one = document.getElementById("one");
+		
+		
+		
+	};
+	
+	window.onclick = function(){
+		count++;
+		if(count<10){
+			one.src="images/"+count+".png";
+		}else{
+			var str = count+"";
+			one.src="images/"+str.substring(1,2)+".png";
+			ten.src="images/"+str.substring(0,1)+".png";
+		}
+	};
+	
+	
+	
+
+
+
+
+</script>
+<title></title>
+<link rel="stylesheet" href="/WebClientTest/jquery/css/jquery-ui.css">
+</head>
+<body>
+	<div>
+		<img src="images/0.png" id="ten"/>
+		<img src="images/0.png" id="one"/>
+	</div>
+		
+</body>
+</html>
